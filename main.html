@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian States Search</title>
+    <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            font-family: 'Bubblegum Sans';
+            background-image: url(./hand-painted-watercolor-nature-background_23-2148941599.avif);
+            background-size: 100vw 100vh;
+            background-repeat: no-repeat;
+            border-spacing: 70px;
+        }
+        button {
+            margin: 20px;
+            width: 80%;
+            height: 90px;
+            border: solid 5px green;
+            background-color: rgb(222, 230, 204);
+            font-family: 'Bubblegum Sans';
+            font-size: 15px;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        video {
+            width: 100vw;
+            height: 100vh;
+        }
+        a {
+            color: black;
+        }
+        input {
+            width: 300px;
+            height: 40px;
+            border-radius: 30px;
+            border: solid 5px;
+            font-size: 20px;
+            border: none;
+        }
+        .mser {
+            width: 700px;
+            height: 50px;
+            border-radius: 30px;
+            border: solid 5px;
+            background-color: white;
+        }
+        input:focus{
+            outline: none;
+            border: none;
+        }
+        .state-info h1 {
+            margin: 0;
+            font-size: 20px;
+            flex: 1;
+            text-align: left;
+        }
+        .state-info p {
+            margin: 0;
+            text-align: right;
+            flex: 1;
+            font-size: 16px;
+        }
+        .p1{
+            line-height: 1.6;
+            width:1150px;
+        }
+        .scroll{
+            margin: 20px;
+            width: 150px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            background-color: rgba(9, 241, 28, 0.758);
+            color: white;
+            position: relative;
+            top: 10px;
+            display: inline;
+            justify-content: center;
+            border: 2px solid black;
+            font-size: 20px;
+        }
+        #shead{
+            width: 100vw;
+            height: 100px;
+            background-color: rgb(185, 211, 182);
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            transition:opacity 0.5s ease-in-out,visibility 1s ease-in-out ;
+            position: fixed;
+            top: 0px;
+            left:0px;
+            z-index: 1000;
+            color: rgb(0, 167, 0);
+            border-bottom: 2px solid rgb(0, 167, 0);
+        }
+        #shead.visible{
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <header id="shead"><div><a href="#main" style="font-size: 20px;position: relative;top: 20px;margin-left: 30px;color: rgb(0, 167, 0);">Home</a><a href="#end" style="font-size: 20px;position: relative;top: 20px;margin-left: 30px;color: rgb(0, 167, 0);">Contact</a><h1 style="font-size: 30px;position: relative;top: 20px;float: right;margin-right: 50px;font-family:'Sofia';">Population Growth</h1></div></header>
+    <div class="main" id="main">
+        <center>
+        <a ><h1>About</h1></a>
+        <p style="font-size: 20px;" class="p1">
+
+This website is dedicated to raising awareness about the complex issue of overpopulation in India. Here, we explore not only the causes and consequences of rapid population growth but also the potential benefits of a growing population when managed effectively. More importantly, we will discuss sustainable solutions that can help India navigate its population dynamics for a brighter, more balanced future.
+
+On this platform, you will find:
+
+Current Population Statistics: Real-time updates on India’s population and growth trends.
+The Pros and Cons of Overpopulation: A balanced view of the potential economic, social, and environmental impacts.
+
+        </p>
+        </center>
+    
+        <div>
+        <h1 style="line-height: 70px;font-size: 100px;font-family: 'Sofia', sans-serif;">Population Growth In India</h1>
+        <center>
+        <button class="scroll" onclick="window.location.href='#cons';" >Consequences</button>
+        <button class="scroll" onclick="window.location.href='#mser';">Ranking</button>
+    </center>
+        </div>
+        </center> 
+    </div>
+        
+        <div id="cons">
+           <h3 style="font-size: 30px;margin-left: 20px;margin-top: 200px;">Advantages of Overpopulation</h3>
+           <p style="font-size: 30px;margin-left: 20px;" class="p1">
+1. Increased Workforce: A larger population means more people available to work.<br>
+2. Larger Consumer Market: A bigger population creates a larger demand for goods and services..<br>
+3. Cultural Diversity: Overpopulation can lead to greater cultural diversity.<br>
+           </p>
+
+<h3 style="font-size: 30px;margin-left: 20px;">Disadvantages of Overpopulation:</h3>
+<p style="font-size: 30px;margin-left: 20px;" class="p1">
+1. Resource Depletion: Rapid population growth puts pressure on natural resources..<br>
+2. Increased Poverty: Overpopulation can strain existing social systems and services..<br>
+3. Overburdened Infrastructure: Cities and towns may become overcrowded..<br>
+        </p>
+    </div>
+    <div class="search">
+        <center>
+            <h1 style="font-size: 60px;">States and Its Population</h1>
+            <div class="mser" id="mser">
+                <div class="input" style="display: inline">
+                    <input type="text" class="state-name" placeholder="🔍Enter State Name" onkeyup="nameFunction()" style="position: relative;top: 5px;float: left;margin-left: 25px;">
+                </div>
+            </div>
+            <ul id="myUL">
+                <li><button><div class="state-info"><h1 class="nsub">Uttar Pradesh</h1><p class="sub">Population: 199812341, Rank: 1</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Maharashtra</h1><p class="sub">Population: 112374333, Rank: 2</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Bihar</h1><p class="sub">Population: 104099452, Rank: 3</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">West Bengal</h1><p class="sub">Population: 91276115, Rank: 4</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Madhya Pradesh</h1><p class="sub">Population: 72626809, Rank: 5</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Tamil Nadu</h1><p class="sub">Population: 72147030, Rank: 6</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Rajasthan</h1><p class="sub">Population: 68548437, Rank: 7</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Karnataka</h1><p class="sub">Population: 61095297, Rank: 8</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Gujarat</h1><p class="sub">Population: 60439692, Rank: 9</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Andhra Pradesh</h1><p class="sub">Population: 49386799, Rank: 10</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Odisha</h1><p class="sub">Population: 46719110, Rank: 11</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Kerala</h1><p class="sub">Population: 33406061, Rank: 12</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Telangana</h1><p class="sub">Population: 35193978, Rank: 13</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Assam</h1><p class="sub">Population: 31169272, Rank: 14</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Haryana</h1><p class="sub">Population: 25351462, Rank: 15</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Punjab</h1><p class="sub">Population: 27704236, Rank: 16</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Chhattisgarh</h1><p class="sub">Population: 25540196, Rank: 17</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Jharkhand</h1><p class="sub">Population: 32988134, Rank: 18</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Uttarakhand</h1><p class="sub">Population: 10086292, Rank: 19</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Himachal Pradesh</h1><p class="sub">Population: 6864602, Rank: 20</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Tripura</h1><p class="sub">Population: 3671030, Rank: 21</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Meghalaya</h1><p class="sub">Population: 2964007, Rank: 22</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Manipur</h1><p class="sub">Population: 2855794, Rank: 23</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Nagaland</h1><p class="sub">Population: 1978502, Rank: 24</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Goa</h1><p class="sub">Population: 1457723, Rank: 25</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Arunachal Pradesh</h1><p class="sub">Population: 1382611, Rank: 26</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Sikkim</h1><p class="sub">Population: 610577, Rank: 27</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Mizoram</h1><p class="sub">Population: 1097206, Rank: 28</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Nagaland</h1><p class="sub">Population: 1980602, Rank: 29</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Lakshadweep</h1><p class="sub">Population: 64473, Rank: 30</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Delhi</h1><p class="sub">Population: 16787941, Rank: 31</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Puducherry</h1><p class="sub">Population: 1244464, Rank: 32</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Andaman and Nicobar Islands</h1><p class="sub">Population: 379944, Rank: 33</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Chandigarh</h1><p class="sub">Population: 1055450, Rank: 34</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Dadra and Nagar Haveli and Daman and Diu</h1><p class="sub">Population: 586956, Rank: 35</p></div></button></li>
+                <li><button><div class="state-info"><h1 class="nsub">Lakshadweep</h1><p class="sub">Population: 64473, Rank: 36</p></div></button></li>
+            </ul>
+            <h1 id="end">Contact</h1>
+            <p>Creators:</p><br>
+            <address>
+                Aravind-Sajan<br>
+                Bhagyalakshmi K Babu<br>
+                Lotapetala Sidharth<br>
+            </address>
+            
+        </center>
+    </div>
+
+    <script>
+        function nameFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.querySelector('.state-name');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("h1")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+        function onscroll(){
+            let header = document.getElementById('shead')
+            let main1=document.getElementById('cons')
+            let main2=document.querySelector('.search')
+            let rate1=main1.getBoundingClientRect()
+            let rate2=main2.getBoundingClientRect()
+            if ((rate1.top<=0 && rate1.bottom>0)||(rate2.top<= 0 && rate2.bottom > 0)){
+                header.classList.add('visible')
+            }else{
+                header.classList.remove('visible')
+            }
+
+        }
+        window.addEventListener('load',onscroll)
+        window.addEventListener('scroll',onscroll)
+    </script>
+</body>
+</html>
